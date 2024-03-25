@@ -31,6 +31,20 @@ python ur10_control.py
 
 This will connect to the robot, move it to a specified position, pause for safety, stop the robot, and disconnect from it.
 
+## Extra:
+In the context of robotics, especially with UR robots, a pose typically consists of 6 components: [x, y, z, rx, ry, rz].
+
+x, y, z: These represent the position of the robot end-effector in Cartesian coordinates, typically in meters. They specify the end-effector's location in space with respect to the robot's base frame.
+
+x: movement left and right
+y: movement forward and backward
+z: movement up and down
+rx, ry, rz: These represent the orientation of the robot end-effector in terms of rotation around the Cartesian axes, expressed in radians. They define the orientation of the end-effector.
+
+rx: rotation around the x-axis (roll)
+ry: rotation around the y-axis (pitch)
+rz: rotation around the z-axis (yaw)
+
 ## Customization
 
 You can customize the script by modifying the target position in the `ur10_control.py` file. Additionally, you can adjust the acceleration and velocity parameters for the movement.
