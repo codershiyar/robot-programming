@@ -116,3 +116,17 @@ if __name__ == "__main__":
 #     # Specify the IP address of your UR10 robot
 #     robot_ip_address = "192.168.1.100"  # Example IP address, replace with your robot's IP
 #     main(robot_ip_address)
+
+
+
+
+# maybe you need this for later
+# import RPi.GPIO as GPIO
+
+# Setup GPIO pin
+# button_pin = 18
+# GPIO.setmode(GPIO.BCM)
+# GPIO.setup(button_pin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+
+ # if GPIO.input(button_pin) == GPIO.LOW:
+ #           print("do something")
