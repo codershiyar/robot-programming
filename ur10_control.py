@@ -83,9 +83,6 @@ if __name__ == "__main__":
     # Rotate the robot around its fixed position by adjusting RX and RY angles
     rotate_robot(ur10_robot, rx_offset=0.1, ry_offset=0.1)
 
-    # Pause for safety
-    time.sleep(2)
-
     # Stop the robot
     stop_robot(ur10_robot)
 
@@ -130,3 +127,23 @@ if __name__ == "__main__":
 
  # if GPIO.input(button_pin) == GPIO.LOW:
  #           print("do something")
+
+
+
+# extra: 
+    # # Get the current pose of the robot
+    # current_pose = robot.get_pose() 
+
+    # # Extract rotation vector and position from the pose
+    # pattern = r"[-+]?\d*\.\d+|\d+"
+    # numbers = [float(num) for num in re.findall(pattern, str(current_pose))]
+    # rotation_vector = tuple(numbers[:3])
+    # position = tuple(numbers[3:6])
+    # print("Rotation vector:", rotation_vector)
+    # print("Position:", position)
+    
+    # # Convert mm to meters for position
+    # px, py, pz = [num * 1000 for num in position]
+    # # Assign rotational components
+    # rx, ry, rz =rotation_vector
+    # print((px, py, pz, rx, ry, rz))
