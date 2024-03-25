@@ -1,5 +1,6 @@
 from urx import Robot
 import time
+import sys
 
 # Created by Coder Shiyar | https://codershiyar.com 
 # Netherlands Kurdistan | 25, 
@@ -130,20 +131,21 @@ if __name__ == "__main__":
 
 
 
-# extra: 
-    # # Get the current pose of the robot
-    # current_pose = robot.get_pose() 
+# Extra: Making Adjustments to Rotation from Current Orientation/Position
+# If you find it necessary to alter rotation while maintaining your current orientation or position, you can utilize specific adjustments for each axis. 
+# For instance, if you need to make changes to the rotation about the Z-axis (rz) or the Y-axis (ry), follow similar principles for adjustments on other axes as needed. This method ensures precise modifications while preserving the desired orientation or position.
 
-    # # Extract rotation vector and position from the pose
-    # pattern = r"[-+]?\d*\.\d+|\d+"
-    # numbers = [float(num) for num in re.findall(pattern, str(current_pose))]
-    # rotation_vector = tuple(numbers[:3])
-    # position = tuple(numbers[3:6])
-    # print("Rotation vector:", rotation_vector)
-    # print("Position:", position)
-    
+# # Get the current pose of the robot
+    # current_positions = robot.getj()
+    # print("Current joint positions:", current_positions)
+
     # # Convert mm to meters for position
-    # px, py, pz = [num * 1000 for num in position]
+    # px, py, pz = current_positions[:3]
     # # Assign rotational components
-    # rx, ry, rz =rotation_vector
-    # print((px, py, pz, rx, ry, rz))
+    # rx, ry, rz = current_positions[3:6]
+
+    # # Create a new pose by adding the offset to the current pose
+    # new_position = (px, py, pz, rx, ry - 0.2, rz - 0.3)
+
+    # # Move the robot to the new orientation while keeping the position fixed
+    # robot.movej(new_position, acc=0.2, vel=0.1)
