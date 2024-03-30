@@ -17,7 +17,7 @@ Before running the script, ensure that you have the following:
 
 1. Clone this repository to your local machine:
 
-[git clone https://github.com/yourusername/ur10-python-control.git](https://github.com/codershiyar/ur10-python-control)https://github.com/codershiyar/ur10-python-control
+[git clone https://github.com/codershiyar/ur10-python-control.git](https://github.com/codershiyar/ur10-python-control)https://github.com/codershiyar/ur10-python-control
 
 2. Navigate to the repository directory:
 
@@ -25,7 +25,14 @@ cd ur10-python-control
 
 3. Open the `ur10_control.py` file and replace `"192.168.1.100"` with the IP address of your UR10 robot.
 
-4. Run the script:
+4: Install 
+- `pip install urx `
+- `pip install RPi.GPIO`
+
+https://pypi.org/project/urx/0.9.0/
+https://pypi.org/project/RPi.GPIO/ 
+
+5. Run the script:
 
 python ur10_control.py
 
