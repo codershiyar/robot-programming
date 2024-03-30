@@ -112,10 +112,10 @@ python ur10_control.py
 - ry: دوران حول محور y (ميل)
 - rz: دوران حول محور z (ياو)
 
-robot.movej(target_pose, acc=0.5, vel=0.5)
+robot.movej((x, y, z, rx, ry, rz), acc=0.5, vel=0.5)
 
 - movej يستخدم لتحريك الروبوت
-- "target_pose": اجباري
+- "target_pose (x, y, z, rx, ry, rz)": اجباري
 
 هذا هو المعلمة التي تحدد الموقع الذي يجب على الروبوت الوصول إليه. يتم تحديدها عادة باستخدام إحداثيات مفصلية (Joint coordinates) أو إحداثيات كارتيزية (Cartesian coordinates)، اعتمادًا على نوعية الروبوت ونظام التحكم الذي يُستخدم.
 - "acc" (التسارع): اختياري
