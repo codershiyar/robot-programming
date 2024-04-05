@@ -7,7 +7,7 @@ import socket
 
 # The IP address of the robot controller on the network
 # عنوان IP لوحدة تحكم الروبوت على الشبكة
-host = "192.168.0.35"
+host = "192.168.0.5"
 # The port number that the robot controller is listening on
 # رقم المنفذ الذي تستمع إليه وحدة تحكم الروبوت
 port = 30002
